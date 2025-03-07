@@ -141,6 +141,7 @@ build-operator-reference:
 				rm -rf builder && mkdir builder && cd builder && \
 				git clone --depth=1 -b $(API_GEN_BRANCH) https://github.com/$(API_GEN_REPO) api-gen && cd api-gen && \
 				go mod edit -replace github.com/tigera/operator=github.com/$(OPERATOR_REPO)@$$op_ver && \
+				go mod edit -replace github.com/imdario/mergo=github.com/imdario/mergo@v0.3.16 && \
 				go mod tidy && \
 				go mod download all && go build && \
 				go get github.com/$(OPERATOR_REPO)@$$op_ver && \
