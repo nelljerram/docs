@@ -3,7 +3,7 @@
     "title": "master",
     "tigera-operator": {
       "image": "tigera/operator",
-      "version": "master",
+      "version": "v0.0.0-20250306155856-22a16b72ac41",
       "registry": "quay.io"
     },
     "calico": {
